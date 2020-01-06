@@ -87,14 +87,14 @@ Now it's 2015 (imaginary time travel) and you're the person in charge of this pr
 4. Spend about 10 minutes (tops) trying to create a new, improved spreadsheet with all of these data. 
 
 ! In your Word document answer the questions below. 
-!And like in our future in-class assignemnts, you can work with the people around you on this assignment:
+! And like in our future in-class assignemnts, you can work with the people around you on this assignment:
 Q1. What were some of the things that you thought were wrong with the spreadsheet?
 Q2. What were some of the steps you took to clean up these data? 
 ```
 
 ### 4. Common Spreadsheet Errors
 #### Skim this section to see how many of the common spreadsheet errors you identified. 
-```
+```diff
 ! In your Word document answer the question below. 
 Q3. How many of these did you consider? What was new to you?
 ```

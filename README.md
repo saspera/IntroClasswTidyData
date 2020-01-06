@@ -140,7 +140,7 @@ Underscores are a good alternative to spaces. Consider writing names in camel ca
 
 {image 8}
 
-#### Date. Formatting. 
+#### Including notes/metadata in the data table. 
 **Example:** You add a legend at the top or bottom of your data table explaining column meaning, units, exceptions, etc.
 
 **Solution:** Recording data about your data (“metadata”) is essential. You may be on v. close terms with your dataset while you are collecting and analysing it, but the chances that you will still remember that the variable “sglmemgp” means single member of group, for example, or the exact algorithm you used to transform a variable or create a derived one, after a few months, a year, or more are slim.
@@ -151,6 +151,32 @@ However, metadata should not be contained in the data file itself. Unlike a tabl
 
 *Basically. Store all your notes in a seperate text file.*
 
+**Phew, what a fun reference! Let's move on.**
+
+### Dealing. With. Dates.
+Dates in spreadsheets are stored in a single column. While this seems the most natural way to record dates, it actually is not best practice. A spreadsheet application will display the dates in a seemingly correct way (to a human observer) but how it actually handles and stores the dates may be problematic.
+
+In particular, please remember that functions that are valid for a given spreadsheet program are usually guaranteed to be compatible only within the same family of products. If you will later need to export the data and need to conserve the timestamps, you are better off handling them using one of the solutions discussed below. (Jan 13, 2019 in Excel speak is actually stored as, "43478" - the number of days after January 1, 1900. Because. Sure.)
+
+Additionally, Excel can turn things that aren’t dates into dates, for example names or identifiers like MAR1, DEC1, OCT4. So if you’re avoiding the date format overall, it’s easier to identify these issues.
+
+```
++ Exercise Part 2
+1. In the 'dates' tab of your spreadsheet, you have the data from 2014 plot 3.  
+   There's a 'Date collected' column. 
+2. Extract month, day, and year from the dates to new columns. 
+   For this we can use the built in Excel functions '=Year()', '=Month()', '=Day()'
+   (Make sure the new column is formatted as number and not as a date.)
+3. Does the year say 2019? That's because Excel is dumb. Even though you want the year to be 2014,
+   your spreadsheet automatically interpretetted it as 2019, the year you entered the data.
+   Type 2014 into the first year cell, and then put the mouse over the lower, right-hand
+   corner of the cell until a tiny, black, plus sign appears, and drag that value down.
+```
+It is much safer to store dates with YEAR, MONTH, DAY in separate columns or as YEAR and DAY-OF-YEAR in separate columns.
+
+Note: Excel is unable to parse dates from before 1899-12-31, and will thus leave these untouched. If you’re mixing historic data from before and after this date, Excel will translate only the post-1900 dates into its internal format, thus resulting in mixed data. If you’re working with historic data, be extremely careful with your dates!
+
+Excel also entertains a second date system, the 1904 date system, as the default in Excel for Macintosh. Because, again, sure. This system will assign a different serial number than the 1900 date system. Because of this, dates must be checked for accuracy when exporting data from Excel - and even when just switching data from PCs to Macs (look for dates that are ~4 years off).
 
 
 

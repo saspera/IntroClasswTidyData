@@ -121,6 +121,7 @@ The spreadsheets or statistical programs will likely mis-interpret blank cells t
 
 #### Using problematic null values
 ***Example:*** using -999 or other numerical values (or zero) to represent missing data.
+
 ***Solutions:***
 There are a few reasons why null values get represented differently within a dataset. Sometimes confusing null values are automatically recorded from the measuring device. If that’s the case, there’s not much you can do, but it can be addressed in data cleaning with a tool like OpenRefine before analysis. Other times different null values are used to convey different reasons why the data isn’t there. This is important information to capture, but is in effect using one column to capture two pieces of information. Like for using formatting to convey information it would be good here to create a new column like ‘data_missing’ and use that column to capture the different reasons.
 
@@ -153,9 +154,9 @@ Underscores are a good alternative to spaces. Consider writing names in camel ca
 ![image8](https://github.com/saspera/assets/blob/master/Image8.png)
 
 #### Including notes/metadata in the data table. 
-**Example:** You add a legend at the top or bottom of your data table explaining column meaning, units, exceptions, etc.
+***Example:*** You add a legend at the top or bottom of your data table explaining column meaning, units, exceptions, etc.
 
-**Solution:** Recording data about your data (“metadata”) is essential. You may be on v. close terms with your dataset while you are collecting and analysing it, but the chances that you will still remember that the variable “sglmemgp” means single member of group, for example, or the exact algorithm you used to transform a variable or create a derived one, after a few months, a year, or more are slim.
+***Solution:*** Recording data about your data (“metadata”) is essential. You may be on v. close terms with your dataset while you are collecting and analysing it, but the chances that you will still remember that the variable “sglmemgp” means single member of group, for example, or the exact algorithm you used to transform a variable or create a derived one, after a few months, a year, or more are slim.
 
 As well, there are many reasons other people may want to examine or use your data - to understand your findings, to verify your findings, to review your submitted publication, to replicate your results, to design a similar study, or even to archive your data for access and re-use by others. While digital data by definition are machine-readable, understanding their meaning is a job for human beings. The importance of documenting your data during the collection and analysis phase of your research cannot be overestimated, especially if your research is going to be part of the scholarly record.
 

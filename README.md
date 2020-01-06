@@ -26,6 +26,7 @@ You have three tasks to finish in class today, and one short assignment for Wedn
 
 ### Introduction
 One of the major goals of this class is for everyone to leave here with a better understanding of how to collect data, different types of data, and how to ask questions and perform the appropriate statistical analyses on any dataset. So today, we're going to jump right into working with data and learn about the best practices and common pitfalls of data organization. If you organize your data in the most 'tidy' way, it makes data analyis (and science) so. much. easier. I don't think you'd believe me if I told you the amount of time (approimately my entire fourth year of graduate school) I've spent just organzing data, or 'data wrangling', before I could even begin to think about analyzing it. 
+
 ![sciencegif](https://github.com/saspera/assets/blob/master/ronburgundyscience.gif)
 ###### I could not find one 'science' gif with a lady, which was upsetting. 
 

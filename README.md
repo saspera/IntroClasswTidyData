@@ -51,7 +51,7 @@ Another best practice is to keep track of the steps you took in your clean up or
 ![textfile screenshot](https://github.com/saspera/assets/blob/master/spreadsheet-setup-updated.png)
 
 Do not - I repeat, do not - do what I usually do, and have 4 different files ("survey_data_og.xlsx", "survey_data_final_for_real.xlsx", "survey_data_this_is_really_the_last_one.xlsx", "survey_data_actual_real_final_but_really.xlsx")
-and have to try and remember what they were 6 months after I last touched it.
+and have to try and remember what they were 6 months after I last opened them.
 
 ### 3. Structuring data in spreadsheets
 The cardinal rule of spreadsheet programs for data is to keep it ['tidy.'](https://www.jstatsoft.org/article/view/v059i10)

@@ -234,6 +234,7 @@ values that are integers between 1 and 24
 Q4. Enter a 35 in the column. What happens?
 ```
 Quality assurance can make data entry easier as well as more robust. For example, if you use a list of options to restrict data entry, the spreadsheet will provide you with a drop-downlist of the available items. So, instead of trying to remember how to spell Dipodomys spectabilis, you can select the right option from the list.
+
 ![image10](https://github.com/saspera/assets/blob/master/Image10.png)
 
 #### Quality Control

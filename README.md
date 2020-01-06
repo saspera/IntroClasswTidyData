@@ -78,7 +78,7 @@ So, instead we should have:
 
 ```diff 
 + Exercise Part 1
-1. Download the spreadsheet (survey_data_spreadsheet.xlsx) from Assignments>Day 1
+1. Download the spreadsheet (survey_data_spreadsheet.xlsx) from Jan 13 folder. 
 2. Open the data in Excel.
 3. You will see that there are two tabs. 
 Two field assistants conducted the surveys, once in 2013 and one in 2014, and they both kept track of the datain their own way. 

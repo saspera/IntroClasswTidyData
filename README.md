@@ -9,10 +9,10 @@ You have three tasks to finish in class today, and one short assignment for Wedn
 #### Today
 - [ ] Read through the syllabus on Blackboard
 - [ ] Go through the assignment on keeping data tidy (see **Monday Assignment** section below) and submit it to Assignments>XXX
-- [ ] Fill out [**_this_ short survey**](https://forms.gle/UASqkAGEi8dAfJvF6) 
+- [ ] Fill out [**_this_ short survey**](https://forms.gle/UASqkAGEi8dAfJvF6) [click the link]
 
 #### For Wednesday
-- [ ] Complete the **short** worksheet that Dr. Lookingbill will hand out, where we all remember how fun math is, which I'll collect at the beginning of class on Wednesday. 
+- [ ] Complete the **short** worksheet that Dr. Lookingbill hands out at the end of class, where we all remember how fun math is. I'll collect it at the beginning of class on Wednesday. 
 
 ## Monday Assignment
 ###### Adopted fromm DataCarpentry.org
@@ -26,31 +26,36 @@ You have three tasks to finish in class today, and one short assignment for Wedn
  
 
 ### Introduction
-One of the major goals of this class is for everyone to leave here with a better understanding of how to collect data, different types of data, and how to ask questions and perform the approprioate statistical analyses on any dataset. So today, we're going to jump right into working with data and use the best practices and pitfall of data organization. If you organize your data in the most 'tidy, it makes data analyis (and science) so. much. easier. I don't think you'd believe me if I told you the amount of time (approimately my entire fourth year of graduate school) I've spent just organzing data, or 'data wrangling', before I could even begin to think about analyzing it. 
-{science gif}
+One of the major goals of this class is for everyone to leave here with a better understanding of how to collect data, different types of data, and how to ask questions and perform the approprioate statistical analyses on any dataset. So today, we're going to jump right into working with data and learn about the best practices and common pitfalls of data organization. If you organize your data in the most 'tidy' way, it makes data analyis (and science) so. much. easier. I don't think you'd believe me if I told you the amount of time (approimately my entire fourth year of graduate school) I've spent just organzing data, or 'data wrangling', before I could even begin to think about analyzing it. 
+![sciencegif](https://github.com/saspera/assets/blob/master/ronburgundyscience.gif)
 ###### I could not find one 'science' gif with a lady, which was upsetting. 
 
 Most researchers have their data in spreadhseets, so, that's where we'll start. Spreadsheets allow scientists to do a lot of things, like data entry, organzing data, subsetting and sorting data, (v. basic) statistics, and (v. basic) plotting. I say '(v. basic)' because spreadsheet-software like Excel is pretty limited in what it can do, and it's also easy to accidentlly apply the wrong formulas to adjacent cells - so for these - and reproducibility reasons - I like to do a majority of my statistics and figure making using other programs like R or Python.
+![austinpowers](https://github.com/saspera/assets/blob/master/AustinPowersExcelMeme.jpg)
 
 That being said, Excel is still super useful for storing data, and also totally appropriate many of lab assignments for this class. So, we're going to use learn how to 'tidy' our data. *Good organization is the foundation of any research project.*
 
 ### Formatting data tables in Spreadsheets
-
-The most common mistake made is treating spreadsheet programs like lab notebooks, that is, relying on context, notes in the margin, spatial layout of data and fields to convey information. As humans, we can (usually) interpret these things, but computers don’t view information the same way, and unless we explain to the computer what every single thing means (and that can be hard!), it will not be able to see how our data fits together.
+The most common mistake made is treating spreadsheet programs like lab notebooks, that is, relying on context, notes in the margin, spatial layout of data and fields to convey information. As humans, we can (usually) interpret these things, but computers don’t view information the same way, and unless we explain to the computer what every single thing means (and that can be the most annoying!), it will not be able to see how our data fits together.
 
 Using the power of computers, we can manage and analyze data in much more effective and faster ways, but to use that power, we have to set up our data for the computer to be able to understand it (and computers are very literal).
 
 This is why it’s extremely important to set up well-formatted tables from the outset - before you even start entering data from your very first preliminary experiment. *Data organization is the foundation of your research project.* It can make it easier or harder to work with your data throughout your analysis, so it’s worth thinking about when you’re doing your data entry or setting up your experiment. You can set things up in different ways in spreadsheets, but some of these choices can limit your ability to work with the data in other programs or have the you-of-6-months-from-now or your collaborator work with the data.
 
 ### Keep track of your analyses. 
+When you’re working with spreadsheets, during data clean up or analyses, it’s very easy to end up with a spreadsheet that looks very different from the one you started with. In order to be able to reproduce your analyses or figure out what past-you did, you should create a new file with your cleaned or analyzed data. Don’t modify the original dataset, or you will never know where you started!
 
-When you’re working with spreadsheets, during data clean up or analyses, it’s very easy to end up with a spreadsheet that looks very different from the one you started with. In order to be able to reproduce your analyses or figure out what you did when Reviewer #3 asks for a different analysis, you should create a new file with your cleaned or analyzed data. Don’t modify the original dataset, or you will never know where you started!
+Another best practice is to keep track of the steps you took in your clean up or analysis. You should track these steps as you would any step in an experiment. I recommend that you do this in a plain text file (use that notepad/wordpad app on your laptop) and store it in the same folder as the data file. 
+[textfile screenshot](https://github.com/saspera/assets/blob/master/spreadsheet-setup-updated.png)
 
-keep track of the steps you took in your clean up or analysis. You should track these steps as you would any step in an experiment. We recommend that you do this in a plain text file stored in the same folder as the data file. (Do not do what I usually do, and have 4 different files and have to try and remember what they were 6 months after you last touched it, "survey_data_og.xlsx", "survey_data_final_for_real.xlsx", "survey_data_this_is_really_the_last_one.xlsx", "survey_data_actual_real_final_but_really.xlsx")
+Do not - I repeat, do not - do what I usually do, and have 4 different files ("survey_data_og.xlsx", "survey_data_final_for_real.xlsx", "survey_data_this_is_really_the_last_one.xlsx", "survey_data_actual_real_final_but_really.xlsx")
+and have to try and remember what they were 6 months after I last touched it.
 
 ### Structuring data in spreadsheets
 The cardinal rule of spreadsheet programs for data is to keep it ['tidy.'](https://www.jstatsoft.org/article/view/v059i10)
+![mariekondo](https://github.com/saspera/assets/blob/master/tidyspreadsheet.png)
 
+To do so, you should:
 1. Put all your variables (the thing you're measuring, like 'weight' or 'temperature') in columns.
 2. Put each observation in its own row.
 3. Dont combine multiple pieces of information in one cell. 
@@ -59,15 +64,14 @@ The cardinal rule of spreadsheet programs for data is to keep it ['tidy.'](https
 
 For instance, we have data from a survey of small mammals in a desert ecosystem. Different people have gone to the field and entered data into a spreadsheet. They keep track of things like species, plot, weight, sex and date collected.
 
-If they were to keep track of the data like this
+If they were to keep track of the data like this:
+![image2](https://github.com/saspera/assets/blob/master/Image2.png)
 
 the problem is that species and sex are in the same field. So, if they wanted to look at all of one species or look at different weight distributions by sex, it would be hard to do this using this data setup. If instead we put sex and species in different columns, you can see that it would be much easier.
 
 The rule of thumb, when setting up a datasheet, is columns = variables, rows = observations, cells = data (values).
-{image 2}
-
 So, instead we should have:
-{image 3}
+![image 3](https://github.com/saspera/assets/blob/master/Image3.png)
 
 ```diff 
 + Exercise Part 1
@@ -85,12 +89,11 @@ Q2. Write some of the steps you would need to take to clean up the 2013 and 2014
 
 ### Common Spreadsheet Errors
 #### Skim this section to see how many of the common spreadsheet errors you identified. 
-There are a few potential errors to be on the lookout for in your own data as well as data from collaborators or the Internet. If you are aware of the errors and the possible negative effect on downstream data analysis and result interpretation, it might motivate yourself and your project members to try and avoid them. Making small changes to the way you format your data in spreadsheets can have a great impact on efficiency and reliability when it comes to data cleaning and analysis.
+There are a few potential errors to be on the lookout for in your own data as well as data from collaborators or the Internet. If you are aware of the errors and the possible negative effect on downstream data analysis and result interpretation, it might motivate yourself and your lab-group project members to try and avoid them. Making small changes to the way you format your data in spreadsheets can have a great impact on efficiency and reliability when it comes to data cleaning and analysis.
 
 #### Using multiple tables
-A common strategy is creating multiple data tables within one spreadsheet. This confuses the computer, so don’t do this! When you create multiple tables within one spreadsheet, you’re drawing false associations between things for the computer, which sees each row as an observation. You’re also potentially using the same field name in multiple places, which will make it harder to clean your data up into a usable form. The example below depicts the problem:
-
-{image 4}
+A common strategy is creating multiple data tables within one spreadsheet. This confuses the computer! When you create multiple tables within one spreadsheet, you’re drawing false associations between things for the computer, which sees each row as an observation. You’re also potentially using the same field name in multiple places, which will make it harder to clean your data up into a usable form. The example below depicts the problem:
+![image4](https://github.com/saspera/assets/blob/master/Image4.png)
 
 In the example above, the computer will see (for example) row 4 and assume that all columns A-AF refer to the same sample. This row actually represents four distinct samples (sample 1 for each of four different collection dates - May 29th, June 12th, June 19th, and June 26th), as well as some calculated summary statistics (an average (avr) and standard error of measurement (SEM)) for two of those samples. Other rows are similarly problematic.
 
@@ -118,13 +121,13 @@ The spreadsheets or statistical programs will likely mis-interpret blank cells t
 There are a few reasons why null values get represented differently within a dataset. Sometimes confusing null values are automatically recorded from the measuring device. If that’s the case, there’s not much you can do, but it can be addressed in data cleaning with a tool like OpenRefine before analysis. Other times different null values are used to convey different reasons why the data isn’t there. This is important information to capture, but is in effect using one column to capture two pieces of information. Like for using formatting to convey information it would be good here to create a new column like ‘data_missing’ and use that column to capture the different reasons.
 
 Whatever the reason, it’s a problem if unknown or missing data is recorded as -999, 999, or 0. Many statistical programs will not recognize that these are intended to represent missing (null) values. How these values are interpreted will depend on the software you use to analyze your data. It is essential to use a clearly defined and consistent null indicator. Blanks (most applications) and NA (for R) are good choices. White et al, 2013, explain good choices for indicating null values for different software applications in their article: Nine simple ways to make it easier to (re)use your data. Ideas in Ecology and Evolution.
-{image 5} 
+![image5](https://github.com/saspera/assets/blob/master/image5.png)
 
 #### Using formatting to convey information
 **Example:** highlighting cells, rows or columns that should be excluded from an analysis, leaving blank rows to indicate separations in data.
-{image 6} 
+![image6](https://github.com/saspera/assets/blob/master/image6.png)
 **Solution:** create a new field to encode which data should be excluded.
-{image 7}
+![image7](https://github.com/saspera/assets/blob/master/Image7.png)
 
 #### Placing or units in cells
 Just put it in the column title. So of having a 'Temperature' field, and then, in the next three cells, having your entries be 45F, 42F, 53F; have a 'Temperature (deg F)' field, and then, your next three cells would be, 45, 42, and 53. 
@@ -134,11 +137,11 @@ Just put it in the column title. So of having a 'Temperature' field, and then, i
 **Solution:** Don’t include more than one piece of information in a cell. This will limit the ways in which you can analyze your data. If you need both these measurements, design your data sheet to include this information. For example, include one column for number of individuals and a separate column for sex.
 
 #### Using spaces (or other special characteris) in field names
-Choose descriptive field names, but be careful not to include spaces, numbers, or special characters of any kind. Spaces can be misinterpreted by parsers that use whitespace as delimiters and some programs don’t like field names that are text strings that start with numbers.
+Choose descriptive field names, but be careful not to include spaces, numbers, or special characters of any kind. Spaces can be misinterpreted by parsers that use whitespace as delimiters and some programs (::cough::ArcGIS::cough::) don’t like field names that are text strings that start with numbers. 
 
 Underscores are a good alternative to spaces. Consider writing names in camel case (like this: ExampleFileName) to improve readability. Remember that abbreviations that make sense at the moment may not be so obvious in 6 months, but don’t overdo it with names that are excessively long. Including the units in the field names avoids confusion and enables others to readily interpret your fields.
 
-{image 8}
+![image8](https://github.com/saspera/assets/blob/master/Image8.png)
 
 #### Including notes/metadata in the data table. 
 **Example:** You add a legend at the top or bottom of your data table explaining column meaning, units, exceptions, etc.

@@ -7,12 +7,12 @@ I'm sorry I couldn't be there today but I'm up in Boston presenting some of my w
 You have three tasks to finish in class today, and one short assignment for Wednesday
 
 #### Today
-- [ ] Read through the syllabus on Blackboard
-- [ ] Go through the assignment on keeping data tidy (see **Monday Assignment** section below) and submit it to Assignments>XXX
+- [ ] Read through the syllabus on Blackboard>Syllabus
+- [ ] Go through the assignment on keeping data tidy (see **Monday Assignment** section below) and submit on Blackaboard to Blackboard>Assignments>In-Class Activities>January 13>Syllabus, Tidy Data, and Short Survey
 - [ ] Fill out [**_this_ short survey**](https://forms.gle/UASqkAGEi8dAfJvF6) [click the link]
 
 #### For Wednesday
-- [ ] Complete the **short** worksheet that Dr. Lookingbill hands out at the end of class, where we all remember how fun math is. I'll collect it at the beginning of class on Wednesday. 
+- [ ] Complete the worksheet that Dr. Lookingbill hands out at the end of class. I'll collect it at the beginning of class on Wednesday. 
 
 ## Monday Assignment
 ###### Adopted fromm DataCarpentry.org

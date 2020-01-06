@@ -290,8 +290,9 @@ To save an Excel tab (you can only save one tab per one CSV file) as a CSV file:
 3. Type in the file name, and you're good to go!
 
 ##### A note on R and .xlsx
-If you've used R before, you might be saying, "Well, it appears Dr. Spera doesn't know R, because I know there are R packages that can read .xls or .xlsx files (as well as Google spreadsheets, which we are apparentl not even allowed in this course). It is even possible to access different worksheets in the .xlsx documents.".
-Yes. I obviously know R. And know that. 
+If you've used R before, you might be saying, "Well, it appears Dr. Spera doesn't know R, because I know there are R packages that can read .xls or .xlsx files (as well as Google spreadsheets, which we are not even allowed in this course). It is even possible to access different worksheets in the .xlsx documents. So. There."
+
+Yes. I know R. And know that. 
 But, some things to keep in mind. 
 - some of these only work on Windows
 - this equates to replacing a (simple but manual) export to csv with additional complexity/dependencies in the data analysis R code

@@ -9,7 +9,7 @@ You have three tasks to finish in class today, and one short assignment for Wedn
 #### Today
 - [ ] Read through the syllabus on Blackboard>Syllabus
 - [ ] Go through the assignment on keeping data tidy (see **Monday Assignment** section below) and submit to Blackboard where you find the link to this assignment.
-- [ ] Fill out [**_this short survey**](https://forms.gle/UASqkAGEi8dAfJvF6) [click the link]
+- [ ] Fill out [**this short survey**](https://forms.gle/UASqkAGEi8dAfJvF6) [click the link]
 
 #### For Wednesday
 - [ ] Complete the worksheet that Dr. Lookingbill hands out at the end of class. I'll collect it at the beginning of class on Wednesday. 
@@ -20,32 +20,30 @@ You have three tasks to finish in class today, and one short assignment for Wedn
 #### You'll need
 1. Microsoft Excel (freely available to all UR students)
 2. Microsoft Word (to write up your answers which you'll submit to Blackboard at the end of the class period)
-3. 'survey_data_spreadsheet.xlsx' which can be downloaded from Blackboard from Assignments>Day 1
+3. 'survey_data_spreadsheet.xlsx' which can be downloaded from that January 13 folder on Blackboard
    - These data are observations of a small mammal community in southern Arizona. It's part of a project studying the effects of rodents and ants on the plant community and this project has been running for more than 40 years. The rodents are sampled on a series of 24 plots, with different experimental manipulations controlling which rodents are allowed to access which plots. 
    - This is this simplified version of a real dataset that has been used in over 100 publications.
- 
 
 ### Introduction
-One of the major goals of this class is for everyone to leave here with a better understanding of how to collect data, different types of data, and how to ask questions and perform the approprioate statistical analyses on any dataset. So today, we're going to jump right into working with data and learn about the best practices and common pitfalls of data organization. If you organize your data in the most 'tidy' way, it makes data analyis (and science) so. much. easier. I don't think you'd believe me if I told you the amount of time (approimately my entire fourth year of graduate school) I've spent just organzing data, or 'data wrangling', before I could even begin to think about analyzing it. 
+One of the major goals of this class is for everyone to leave here with a better understanding of how to collect data, different types of data, and how to ask questions and perform the appropriate statistical analyses on any dataset. So today, we're going to jump right into working with data and learn about the best practices and common pitfalls of data organization. If you organize your data in the most 'tidy' way, it makes data analyis (and science) so. much. easier. I don't think you'd believe me if I told you the amount of time (approimately my entire fourth year of graduate school) I've spent just organzing data, or 'data wrangling', before I could even begin to think about analyzing it. 
 ![sciencegif](https://github.com/saspera/assets/blob/master/ronburgundyscience.gif)
-
 ###### I could not find one 'science' gif with a lady, which was upsetting. 
 
-Most researchers have their data in spreadhseets, so, that's where we'll start. Spreadsheets allow scientists to do a lot of things, like data entry, organzing data, subsetting and sorting data, (v. basic) statistics, and (v. basic) plotting. I say '(v. basic)' because spreadsheet-software like Excel is pretty limited in what it can do, and it's also easy to accidentlly apply the wrong formulas to adjacent cells - so for these - and reproducibility reasons - I like to do a majority of my statistics and figure making using other programs like R or Python.
+Most researchers have their data in spreadhseets, so, that's where we'll start. Spreadsheets allow scientists to do a lot of things, like data entry, organzing data, subsetting and sorting data, (v. basic) statistics, and (v. basic) plotting. I say '(v. basic)' because spreadsheet software like Excel is pretty limited in what it can do, and it's also easy to accidentlly apply the wrong formulas to adjacent cells - so for these - and reproducibility reasons - I like to do a majority of my statistics and figure-making using other programs like R or Python.
 
 ![austinpowers](https://github.com/saspera/assets/blob/master/AustinPowersExcelMeme.jpg)
 
-That being said, Excel is still super useful for storing data, and also totally appropriate many of lab assignments for this class. So, we're going to use learn how to 'tidy' our data. *Good organization is the foundation of any research project.*
+That being said, Excel is still super useful for storing data, and also totally appropriate many of the lab assignments for this class. So, we're going to use learn how to 'tidy' our data. *Good organization is the foundation of any research project.*
 
 ### Formatting data tables in Spreadsheets
-The most common mistake made is treating spreadsheet programs like lab notebooks, that is, relying on context, notes in the margin, spatial layout of data and fields to convey information. As humans, we can (usually) interpret these things, but computers don’t view information the same way, and unless we explain to the computer what every single thing means (and that can be the most annoying!), it will not be able to see how our data fits together.
+The most common mistake made is treating spreadsheet programs like lab notebooks. That is, relying on context, notes in the margin, spatial layout of data and fields to convey information. As humans, we can (usually) interpret these things, but computers don’t view information the same way, and unless we explain to the computer what every single thing means (and that can be the most annoying), it will not be able to see how our data fits together.
 
-Using the power of computers, we can manage and analyze data in much more effective and faster ways, but to use that power, we have to set up our data for the computer to be able to understand it (and computers are very literal).
+Using the power of computers, though, we can manage and analyze data in much more effective and faster ways, but to use that power, we have to set up our data for the computer to be able to understand it (and computers are very literal).
 
 This is why it’s extremely important to set up well-formatted tables from the outset - before you even start entering data from your very first preliminary experiment. *Data organization is the foundation of your research project.* It can make it easier or harder to work with your data throughout your analysis, so it’s worth thinking about when you’re doing your data entry or setting up your experiment. You can set things up in different ways in spreadsheets, but some of these choices can limit your ability to work with the data in other programs or have the you-of-6-months-from-now or your collaborator work with the data.
 
 ### Keep track of your analyses. 
-When you’re working with spreadsheets, during data clean up or analyses, it’s very easy to end up with a spreadsheet that looks very different from the one you started with. In order to be able to reproduce your analyses or figure out what past-you did, you should create a new file with your cleaned or analyzed data. Don’t modify the original dataset, or you will never know where you started!
+When you’re working with spreadsheets, during data clean-up or analyses, it’s very easy to end up with a spreadsheet that looks very different from the one you started with. In order to be able to reproduce your analyses or figure out what past-you did, you should create a new file with your cleaned or analyzed data. Don’t modify the original dataset, or you will never know where you started.
 
 Another best practice is to keep track of the steps you took in your clean up or analysis. You should track these steps as you would any step in an experiment. I recommend that you do this in a plain text file (use that notepad/wordpad app on your laptop) and store it in the same folder as the data file. 
 
@@ -268,7 +266,7 @@ Conditional formatting basically can essentially color code your values by some 
 3. Choose 2-Color Scale rule (pick any colors you'd like) and hit okay. 
 
 ! In your Word document answer the question below. 
-Q5. Now we can scane through our data, and different colors will stand out. Do you notice any strange values? What are they?
+Q5. Now we can scan through our data, and different colors will stand out. Do you notice any strange values? What are they?
 ```
 
 ### Exporting data.

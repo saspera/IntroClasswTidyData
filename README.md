@@ -42,6 +42,34 @@ Using the power of computers, we can manage and analyze data in much more effect
 
 This is why it’s extremely important to set up well-formatted tables from the outset - before you even start entering data from your very first preliminary experiment. *Data organization is the foundation of your research project.* It can make it easier or harder to work with your data throughout your analysis, so it’s worth thinking about when you’re doing your data entry or setting up your experiment. You can set things up in different ways in spreadsheets, but some of these choices can limit your ability to work with the data in other programs or have the you-of-6-months-from-now or your collaborator work with the data.
 
+### Keep track of your analyses. 
+
+When you’re working with spreadsheets, during data clean up or analyses, it’s very easy to end up with a spreadsheet that looks very different from the one you started with. In order to be able to reproduce your analyses or figure out what you did when Reviewer #3 asks for a different analysis, you should create a new file with your cleaned or analyzed data. Don’t modify the original dataset, or you will never know where you started!
+
+keep track of the steps you took in your clean up or analysis. You should track these steps as you would any step in an experiment. We recommend that you do this in a plain text file stored in the same folder as the data file. (Do not do what I usually do, and have 4 different files and have to try and remember what they were 6 months after you last touched it, "survey_data_og.xlsx", "survey_data_final_for_real.xlsx", "survey_data_this_is_really_the_last_one.xlsx", "survey_data_actual_real_final_but_really.xlsx")
+
+### Structuring data in spreadsheets
+The cardinal rule of spreadsheet programs for data is to keep it ['tidy.'](https://www.jstatsoft.org/article/view/v059i10)
+
+1. Put all your variables (the thing you're measuring, like 'weight' or 'temperature') in columns.
+2. Put each observation in its own row.
+3. Dont combine multiple pieces of information in one cell. 
+4. Leave the raw data raw - don't touch that original data.
+5. Save the cleaned dataset. 
+
+For instance, we have data from a survey of small mammals in a desert ecosystem. Different people have gone to the field and entered data into a spreadsheet. They keep track of things like species, plot, weight, sex and date collected.
+
+If they were to keep track of the data like this
+
+the problem is that species and sex are in the same field. So, if they wanted to look at all of one species or look at different weight distributions by sex, it would be hard to do this using this data setup. If instead we put sex and species in different columns, you can see that it would be much easier.
+
+The rule of thumb, when setting up a datasheet, is columns = variables, rows = observations, cells = data (values).
+
+So, instead we should have:
+
+
+
+
 
 
 

@@ -35,14 +35,14 @@ Most researchers have their data in spreadhseets, so, that's where we'll start. 
 
 That being said, Excel is still super useful for storing data, and also totally appropriate many of the lab assignments for this class. So, we're going to use learn how to 'tidy' our data. *Good organization is the foundation of any research project.*
 
-### Formatting data tables in Spreadsheets
+### 1. Formatting data tables in Spreadsheets
 The most common mistake made is treating spreadsheet programs like lab notebooks. That is, relying on context, notes in the margin, spatial layout of data and fields to convey information. As humans, we can (usually) interpret these things, but computers don’t view information the same way, and unless we explain to the computer what every single thing means (and that can be the most annoying), it will not be able to see how our data fits together.
 
 Using the power of computers, though, we can manage and analyze data in much more effective and faster ways, but to use that power, we have to set up our data for the computer to be able to understand it (and computers are very literal).
 
 This is why it’s extremely important to set up well-formatted tables from the outset - before you even start entering data from your very first preliminary experiment. *Data organization is the foundation of your research project.* It can make it easier or harder to work with your data throughout your analysis, so it’s worth thinking about when you’re doing your data entry or setting up your experiment. You can set things up in different ways in spreadsheets, but some of these choices can limit your ability to work with the data in other programs or have the you-of-6-months-from-now or your collaborator work with the data.
 
-### Keep track of your analyses. 
+### 2. Keep track of your analyses. 
 When you’re working with spreadsheets, during data clean-up or analyses, it’s very easy to end up with a spreadsheet that looks very different from the one you started with. In order to be able to reproduce your analyses or figure out what past-you did, you should create a new file with your cleaned or analyzed data. Don’t modify the original dataset, or you will never know where you started.
 
 Another best practice is to keep track of the steps you took in your clean up or analysis. You should track these steps as you would any step in an experiment. I recommend that you do this in a plain text file (use that notepad/wordpad app on your laptop) and store it in the same folder as the data file. 
@@ -52,7 +52,7 @@ Another best practice is to keep track of the steps you took in your clean up or
 Do not - I repeat, do not - do what I usually do, and have 4 different files ("survey_data_og.xlsx", "survey_data_final_for_real.xlsx", "survey_data_this_is_really_the_last_one.xlsx", "survey_data_actual_real_final_but_really.xlsx")
 and have to try and remember what they were 6 months after I last touched it.
 
-### Structuring data in spreadsheets
+### 3. Structuring data in spreadsheets
 The cardinal rule of spreadsheet programs for data is to keep it ['tidy.'](https://www.jstatsoft.org/article/view/v059i10)
 ![mariekondo](https://github.com/saspera/assets/blob/master/tidyspreadsheet.png)
 
@@ -90,7 +90,7 @@ Q1. Identify what's wrong with this spreadsheet.
 Q2. Write some of the steps you would need to take to clean up the 2013 and 2014 tabs, and to put them together in one spreadsheet. 
 ```
 
-### Common Spreadsheet Errors
+### 4. Common Spreadsheet Errors
 #### Skim this section to see how many of the common spreadsheet errors you identified. 
 There are a few potential errors to be on the lookout for in your own data as well as data from collaborators or the Internet. If you are aware of the errors and the possible negative effect on downstream data analysis and result interpretation, it might motivate yourself and your lab-group project members to try and avoid them. Making small changes to the way you format your data in spreadsheets can have a great impact on efficiency and reliability when it comes to data cleaning and analysis.
 
@@ -120,8 +120,8 @@ However, there’s a difference between a zero and a blank cell in a spreadsheet
 The spreadsheets or statistical programs will likely mis-interpret blank cells that you intend to be zeros. By not entering the value of your observation, you are telling your computer to represent that data as unknown or missing (null). This can cause problems with subsequent calculations or analyses. For example, the average of a set of numbers which includes a single null value is always null (because the computer can’t guess the value of the missing observations). Because of this, it’s very important to record zeros as zeros and truly missing data as nulls.
 
 #### Using problematic null values
-**Example:** using -999 or other numerical values (or zero) to represent missing data.
-**Solutions:**
+***Example:*** using -999 or other numerical values (or zero) to represent missing data.
+***Solutions:***
 There are a few reasons why null values get represented differently within a dataset. Sometimes confusing null values are automatically recorded from the measuring device. If that’s the case, there’s not much you can do, but it can be addressed in data cleaning with a tool like OpenRefine before analysis. Other times different null values are used to convey different reasons why the data isn’t there. This is important information to capture, but is in effect using one column to capture two pieces of information. Like for using formatting to convey information it would be good here to create a new column like ‘data_missing’ and use that column to capture the different reasons.
 
 Whatever the reason, it’s a problem if unknown or missing data is recorded as -999, 999, or 0. Many statistical programs will not recognize that these are intended to represent missing (null) values. How these values are interpreted will depend on the software you use to analyze your data. It is essential to use a clearly defined and consistent null indicator. Blanks (most applications) and NA (for R) are good choices. White et al, 2013, explain good choices for indicating null values for different software applications in their article: Nine simple ways to make it easier to (re)use your data. Ideas in Ecology and Evolution.
@@ -129,11 +129,11 @@ Whatever the reason, it’s a problem if unknown or missing data is recorded as 
 ![image5](https://github.com/saspera/assets/blob/master/image5.jpg)
 
 #### Using formatting to convey information
-**Example:** highlighting cells, rows or columns that should be excluded from an analysis, leaving blank rows to indicate separations in data.
+***Example:*** highlighting cells, rows or columns that should be excluded from an analysis, leaving blank rows to indicate separations in data.
 
 ![image6](https://github.com/saspera/assets/blob/master/image6.png)
 
-**Solution:** create a new field to encode which data should be excluded.
+***Solution:*** create a new field to encode which data should be excluded.
 
 ![image7](https://github.com/saspera/assets/blob/master/Image7.png)
 
@@ -141,8 +141,9 @@ Whatever the reason, it’s a problem if unknown or missing data is recorded as 
 Just put it in the column title. So of having a 'Temperature' field, and then, in the next three cells, having your entries be 45F, 42F, 53F; have a 'Temperature (deg F)' field, and then, your next three cells would be, 45, 42, and 53. 
 
 #### Entering more than one piece of information in a cell
-**Example:** You find one male, and one female of the same species. You enter this as 1M, 1F.
-**Solution:** Don’t include more than one piece of information in a cell. This will limit the ways in which you can analyze your data. If you need both these measurements, design your data sheet to include this information. For example, include one column for number of individuals and a separate column for sex.
+***Example:*** You find one male, and one female of the same species. You enter this as 1M, 1F.
+
+***Solution:*** Don’t include more than one piece of information in a cell. This will limit the ways in which you can analyze your data. If you need both these measurements, design your data sheet to include this information. For example, include one column for number of individuals and a separate column for sex.
 
 #### Using spaces (or other special characteris) in field names
 Choose descriptive field names, but be careful not to include spaces, numbers, or special characters of any kind. Spaces can be misinterpreted by parsers that use whitespace as delimiters and some programs (::cough::ArcGIS::cough::) don’t like field names that are text strings that start with numbers. 
@@ -164,7 +165,7 @@ However, metadata should not be contained in the data file itself. Unlike a tabl
 
 **Phew, what a fun reference guide you can use in future labs. Let's move on.**
 
-### Dealing. With. Dates.
+### 5. Dealing. With. Dates.
 Dates in spreadsheets are stored in a single column. While this seems the most natural way to record dates, it actually is not best practice. A spreadsheet application will display the dates in a seemingly correct way (to a human observer) but how it actually handles and stores the dates may be problematic.
 
 In particular, please remember that functions that are valid for a given spreadsheet program are usually guaranteed to be compatible only within the same family of products. If you will later need to export the data and need to conserve the timestamps, you are better off handling them using one of the solutions discussed below. (Jan 13, 2019 in Excel speak is actually stored as, "43478" - the number of days after January 1, 1900. Because. Sure.)
@@ -191,7 +192,7 @@ Note: Excel also entertains a second date system, the 1904 date system, as the d
 
 To summarize, treating dates as multiple pieces of data rather than one, single piece makes them easier to handle.
 
-### Quality Control
+### 6. Quality Control
 When you have a well-structured data table, you can use several simple techniques within your spreadsheet to ensure the data you enter are free of errors. These approaches include techniques that are implemented prior to entering data (quality assurance) and techniques that are used after entering data to check for errors (quality control).
 
 #### Quality Assurance
@@ -269,7 +270,7 @@ Conditional formatting basically can essentially color code your values by some 
 Q5. Now we can scan through our data, and different colors will stand out. Do you notice any strange values? What are they?
 ```
 
-### Exporting data.
+### 7. Exporting data.
 For the purposes of this class, you'll likely be working with all of your data in Excel - and if we ever use a different statistical program, we'll have step-by-step instructions to help us all out.
 However, maybe you like coding, and R or python are your thing, which is great! Or, you may find yourself needing to share your data with people who don't have access to Mircosoft Excel - it's not a free software. OR, you may have a PC, your friend might have a Mac, and you are entering dates, fun times. 
 
@@ -289,8 +290,8 @@ But, some things to keep in mind.
 data formatting best practice still apply
 - Is there really a good reason why csv won't work? Just save it as a CSV file.
 
-### Upload your Word file to Blackboard, pick up a take-home worksheet from Dr. Lookingbill. And you're good to go!
-### See you on Wednesday
+## Upload your Word file to Blackboard, pick up a take-home worksheet from Dr. Lookingbill. And you're good to go!
+## See you on Wednesday
 
 
 

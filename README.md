@@ -178,9 +178,7 @@ Dates in spreadsheets are stored in a single column. While this seems the most n
 
 In particular, please remember that functions that are valid for a given spreadsheet program are usually guaranteed to be compatible only within the same family of products. If you will later need to export the data and need to conserve the timestamps, you are better off handling them using one of the solutions discussed below. (Jan 13, 2019 in Excel speak is actually stored as, "43478" - the number of days after January 1, 1900. Because. Sure.)
 
-Additionally, Excel can turn things that aren’t dates into dates, for example names or identifiers like MAR1, DEC1, OCT4. So if you’re avoiding the date format overall, it’s easier to identify these issues.
-
-```
+```diff
 + Exercise Part 2
 1. In the 'dates' tab of your spreadsheet, you have the data from 2014 plot 3.  
    There's a 'Date collected' column. 
@@ -253,13 +251,13 @@ Sort the 'Weight_grams' column in your spreadsheet from Largest to Smallest.
 2. On the Data Tab, click 'Sort'
 ```
 ![image11](https://github.com/saspera/assets/blob/master/Image11.png)
-```
+```diff 
 3. You should get a warning asking to 'Expand the Selction'. Make sure that is checked and click 'Sort.
    - Expanding your sort ensures that the all the data in one row move together instead of only sorting a single column in isolation.      - Sorting by only a single column will scramble your data - a single row will no longer represent an individual observation.
 4. Make sure your 'Sort' dialogue box matches the one below, and then hit okay.
 ```
 ![image12](https://github.com/saspera/assets/blob/master/Image12.png)
-```
+```diff
 ! In your Word document answer the question below. 
 Q5. What values are at the top of the data column now? What values are at the bottom of the data column. 
 ```

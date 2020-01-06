@@ -8,8 +8,8 @@ You have three tasks to finish in class today, and one short assignment for Wedn
 
 #### Today
 - [ ] Read through the syllabus on Blackboard>Syllabus
-- [ ] Go through the assignment on keeping data tidy (see **Monday Assignment** section below) and submit on Blackaboard to Blackboard>Assignments>In-Class Activities>January 13>Syllabus, Tidy Data, and Short Survey
-- [ ] Fill out [**_this_ short survey**](https://forms.gle/UASqkAGEi8dAfJvF6) [click the link]
+- [ ] Go through the assignment on keeping data tidy (see **Monday Assignment** section below) and submit to Blackboard where you find the link to this assignment.
+- [ ] Fill out [**_this short survey**](https://forms.gle/UASqkAGEi8dAfJvF6) [click the link]
 
 #### For Wednesday
 - [ ] Complete the worksheet that Dr. Lookingbill hands out at the end of class. I'll collect it at the beginning of class on Wednesday. 

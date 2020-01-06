@@ -244,12 +244,15 @@ In the workbook, navigate to the 'Sorting' tab.
 Sort the 'Weight_grams' column in your spreadsheet from Largest to Smallest.
 1. Highlight the entire 'Weight_grams' column by clicking the 'F' column.
 2. On the Data Tab, click 'Sort'
+```
 ![image11](https://github.com/saspera/assets/blob/master/Image11.png)
+```
 3. You should get a warning asking to 'Expand the Selction'. Make sure that is checked and click 'Sort.
    - Expanding your sort ensures that the all the data in one row move together instead of only sorting a single column in isolation.      - Sorting by only a single column will scramble your data - a single row will no longer represent an individual observation.
 4. Make sure your 'Sort' dialogue box matches the one below, and then hit okay.
+```
 ![image12](https://github.com/saspera/assets/blob/master/Image12.png)
-
+```
 ! In your Word document answer the question below. 
 Q4. What values are at the top of the data column now? What values are at the bottom of the data column. 
 ```
@@ -288,10 +291,7 @@ But, some things to keep in mind.
 data formatting best practice still apply
 - Is there really a good reason why csv won't work? Just save it as a CSV file.
 
-```diff 
-+Upload your Word file to Blackboard, pick up a take-home worksheet from Dr. Lookingbill. And you're good to go!
-```
-
+### Upload your Word file to Blackboard, pick up a take-home worksheet from Dr. Lookingbill. And you're good to go!
 ### See you on Wednesday
 
 

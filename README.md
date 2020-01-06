@@ -84,15 +84,21 @@ So, instead we should have:
 3. You will see that there are two tabs. 
 Two field assistants conducted the surveys, once in 2013 and one in 2014, and they both kept track of the datain their own way. 
 Now it's 2015 (imaginary time travel) and you're the person in charge of this project, and you want to be able to start analyzing the data.
+4. Spend about 10 minutes (tops) trying to create a new, improved spreadsheet with all of these data. 
 
 ! In your Word document answer the questions below. 
 !And like in our future in-class assignemnts, you can work with the people around you on this assignment:
-Q1. Identify what's wrong with this spreadsheet. 
-Q2. Write some of the steps you would need to take to clean up the 2013 and 2014 tabs, and to put them together in one spreadsheet. 
+Q1. What were some of the things that you thought were wrong with the spreadsheet?
+Q2. What were some of the steps you took to clean up these data? 
 ```
 
 ### 4. Common Spreadsheet Errors
 #### Skim this section to see how many of the common spreadsheet errors you identified. 
+```
+! In your Word document answer the question below. 
+Q3. How many of these did you consider? What was new to you?
+```
+
 There are a few potential errors to be on the lookout for in your own data as well as data from collaborators or the Internet. If you are aware of the errors and the possible negative effect on downstream data analysis and result interpretation, it might motivate yourself and your lab-group project members to try and avoid them. Making small changes to the way you format your data in spreadsheets can have a great impact on efficiency and reliability when it comes to data cleaning and analysis.
 
 #### Using multiple tables
@@ -227,7 +233,7 @@ values that are integers between 1 and 24
 9. Now, try entering a 2 in the column. 
 
 ! In your Word document answer the question below. 
-Q3. Enter a 35 in the column. What happens?
+Q4. Enter a 35 in the column. What happens?
 ```
 Quality assurance can make data entry easier as well as more robust. For example, if you use a list of options to restrict data entry, the spreadsheet will provide you with a drop-downlist of the available items. So, instead of trying to remember how to spell Dipodomys spectabilis, you can select the right option from the list.
 ![image10](https://github.com/saspera/assets/blob/master/Image10.png)
@@ -255,7 +261,7 @@ Sort the 'Weight_grams' column in your spreadsheet from Largest to Smallest.
 ![image12](https://github.com/saspera/assets/blob/master/Image12.png)
 ```
 ! In your Word document answer the question below. 
-Q4. What values are at the top of the data column now? What values are at the bottom of the data column. 
+Q5. What values are at the top of the data column now? What values are at the bottom of the data column. 
 ```
 Sorting is a powerful way to check for outliers in your data. 
 
@@ -269,7 +275,7 @@ Conditional formatting basically can essentially color code your values by some 
 3. Choose 2-Color Scale rule (pick any colors you'd like) and hit okay. 
 
 ! In your Word document answer the question below. 
-Q5. Now we can scan through our data, and different colors will stand out. Do you notice any strange values? What are they?
+Q6. Now we can scan through our data, and different colors will stand out. Do you notice any strange values? What are they?
 ```
 
 ### 7. Exporting data.

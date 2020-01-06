@@ -98,7 +98,8 @@ There are a few potential errors to be on the lookout for in your own data as we
 
 #### Using multiple tables
 A common strategy is creating multiple data tables within one spreadsheet. This confuses the computer! When you create multiple tables within one spreadsheet, you’re drawing false associations between things for the computer, which sees each row as an observation. You’re also potentially using the same field name in multiple places, which will make it harder to clean your data up into a usable form. The example below depicts the problem:
-![image4](https://github.com/saspera/assets/blob/master/Image4.png)
+
+![image4](https://github.com/saspera/assets/blob/master/Image4.jpg)
 
 In the example above, the computer will see (for example) row 4 and assume that all columns A-AF refer to the same sample. This row actually represents four distinct samples (sample 1 for each of four different collection dates - May 29th, June 12th, June 19th, and June 26th), as well as some calculated summary statistics (an average (avr) and standard error of measurement (SEM)) for two of those samples. Other rows are similarly problematic.
 
@@ -127,13 +128,15 @@ There are a few reasons why null values get represented differently within a dat
 
 Whatever the reason, it’s a problem if unknown or missing data is recorded as -999, 999, or 0. Many statistical programs will not recognize that these are intended to represent missing (null) values. How these values are interpreted will depend on the software you use to analyze your data. It is essential to use a clearly defined and consistent null indicator. Blanks (most applications) and NA (for R) are good choices. White et al, 2013, explain good choices for indicating null values for different software applications in their article: Nine simple ways to make it easier to (re)use your data. Ideas in Ecology and Evolution.
 
-![image5](https://github.com/saspera/assets/blob/master/image5.png)
+![image5](https://github.com/saspera/assets/blob/master/image5.jpg)
 
 #### Using formatting to convey information
 **Example:** highlighting cells, rows or columns that should be excluded from an analysis, leaving blank rows to indicate separations in data.
 
 ![image6](https://github.com/saspera/assets/blob/master/image6.png)
+
 **Solution:** create a new field to encode which data should be excluded.
+
 ![image7](https://github.com/saspera/assets/blob/master/Image7.png)
 
 #### Placing or units in cells
@@ -161,7 +164,7 @@ However, metadata should not be contained in the data file itself. Unlike a tabl
 
 *Basically. Store all your notes in a seperate text file.*
 
-**Phew, what a fun reference! Let's move on.**
+**Phew, what a fun reference guide you can use in future labs. Let's move on.**
 
 ### Dealing. With. Dates.
 Dates in spreadsheets are stored in a single column. While this seems the most natural way to record dates, it actually is not best practice. A spreadsheet application will display the dates in a seemingly correct way (to a human observer) but how it actually handles and stores the dates may be problematic.
@@ -186,9 +189,110 @@ It is much safer to store dates with YEAR, MONTH, DAY in separate columns or as 
 
 Note: Excel is unable to parse dates from before 1899-12-31, and will thus leave these untouched. If you’re mixing historic data from before and after this date, Excel will translate only the post-1900 dates into its internal format, thus resulting in mixed data. If you’re working with historic data, be extremely careful with your dates!
 
-Excel also entertains a second date system, the 1904 date system, as the default in Excel for Macintosh. Because, again, sure. This system will assign a different serial number than the 1900 date system. Because of this, dates must be checked for accuracy when exporting data from Excel - and even when just switching data from PCs to Macs (look for dates that are ~4 years off).
+Note: Excel also entertains a second date system, the 1904 date system, as the default in Excel for Macs. Because, again, sure. This system will assign a different serial number than the 1900 date system. Because of this, dates must be checked for accuracy when exporting data from Excel - and even when just switching data from PCs to Macs (look for dates that are ~4 years off).
 
+To summarize, treating dates as multiple pieces of data rather than one, single piece makes them easier to handle.
 
+### Quality Control
+When you have a well-structured data table, you can use several simple techniques within your spreadsheet to ensure the data you enter are free of errors. These approaches include techniques that are implemented prior to entering data (quality assurance) and techniques that are used after entering data to check for errors (quality control).
+
+#### Quality Assurance
+Quality assurance stops bad data from ever being entered by checking to see if values are valid during data entry. For example, if research is being conducted at sites A, B, and C, then the value V (which is right next to B on the keyboard) should never be entered. Likewise if one of the kinds of data being collected is a count, only integers greater than or equal to zero should be allowed.
+
+To control the kind of data entered into a spreadsheet we use Data Validation (Excel), to set the values that can be entered in each data column in Excel:
+1. Select the cells or column you want to assure the quailty of
+2. On the 'Data' tab, select 'Data Validation'
+![image9](https://github.com/saspera/assets/blob/master/Image9.png)
+3. In the 'Allow' box, select the kind of data that should be in the column (whole numbers, decimals, lists of items, dates, etc.)
+4. After selecting an item, enter additional detals. For example, if you've chosen a list of values, enter a *comma-delimited list* (list where everything item is separated by a comma) of allowable values in the 'Source' box. 
+
+```diff 
++ Exercise Part 3
+Let's try this out by setting the plot-column in our spreadsheet to only allow plot 
+values that are integers between 1 and 24
+1. Go to the 'QualityAssurance' tab of our Excel worbook.
+2. Select the 'plot_id' column by clicking on the 'A'
+3. On the 'Data' tab, select 'Data Validation'
+4. In the 'Allow' box, select 'Whole number'
+5. Set the minimum value to 1 and the maximum value to 24
+6. Click on the 'Input Message' tab
+   - Title: Only valid Plot IDS can be used
+   - Input message: Valid Plot IDS are 1 - 24
+7. Let's also change the error from a full stop to a warning.
+   - Click on Error alert
+   - Style: Warning
+   - Error message: I think you typed in the wrong number.
+8. Hit okay.
+9. Now, try entering a 2 in the column. 
+
+! In your Word document answer the question below. 
+Q3. Enter a 35 in the column. What happens?
+```
+Quality assurance can make data entry easier as well as more robust. For example, if you use a list of options to restrict data entry, the spreadsheet will provide you with a drop-downlist of the available items. So, instead of trying to remember how to spell Dipodomys spectabilis, you can select the right option from the list.
+![image10](https://github.com/saspera/assets/blob/master/Image10.png)
+
+#### Quality Control
+Before doing any quality control operations, save your original file with the formulas and a name indicating it is the original data. Create a separate file ('data_tidy.xlsx?') with appropriate naming and versioning.
+This is where having that text/notepad/wordpad/word file is important. As you start manipulating your data files, create a readMe document / text file to keep track of your files and document your manipulations so that they may be easily understood and replicated, either by your future self or by an independent researcher. Your readMe file should document all of the files in your data set (including documentation), describe their content and format, and lay out the organizing principles of folders and subfolders. For each of the separate files listed, it is a good idea to document the manipulations or analyses that were carried out on those data. [Cornell University’s Research Data Management Service Group](https://data.research.cornell.edu/content/readme) provides detailed guidelines for how to write a good readMe file, along with an adaptable template. And yes, so many people are bad at organizing their data that there are myriad books, websites, and references dedicated to making everyone a better scientist. 
+
+##### Sorting
+Bad values often sort to the bottom or top of the column. For example, if your data should be numeric, then alphabetical and null data will group at the ends of the sorted data. Sort your data by each field, one at a time. Scan through each column, but pay the most attention to the top and the bottom of a column. If your dataset is well-structured and does not contain formulas, sorting should never affect the integrity of your dataset.
+
+```diff 
++ Exercise Part 4
+In the workbook, navigate to the 'Sorting' tab.
+Sort the 'Weight_grams' column in your spreadsheet from Largest to Smallest.
+1. Highlight the entire 'Weight_grams' column by clicking the 'F' column.
+2. On the Data Tab, click 'Sort'
+![image11](https://github.com/saspera/assets/blob/master/Image11.png)
+3. You should get a warning asking to 'Expand the Selction'. Make sure that is checked and click 'Sort.
+   - Expanding your sort ensures that the all the data in one row move together instead of only sorting a single column in isolation.      - Sorting by only a single column will scramble your data - a single row will no longer represent an individual observation.
+4. Make sure your 'Sort' dialogue box matches the one below, and then hit okay.
+![image12](https://github.com/saspera/assets/blob/master/Image12.png)
+
+! In your Word document answer the question below. 
+Q4. What values are at the top of the data column now? What values are at the bottom of the data column. 
+```
+Sorting is a powerful way to check for outliers in your data. 
+
+##### Conditional Formatting
+Conditional formatting basically can essentially color code your values by some criteria or lowest to highest. This makes it easy to scan your data for outliers. Remember, we don't to use color to represent anything meaninful in our dataset, but, we can use conditional formatting to flag inconsistent values when entering data.
+
+```diff 
++ Exercise Part 5
+1. Still in the sorting 'Sorting' tab, make sure 'Weight_grams' column is higlighted.
+2. In the main Excel menu bar, click Home>Conditional Formatting>Color Scales>More RUles
+3. Choose 2-Color Scale rule (pick any colors you'd like) and hit okay. 
+
+! In your Word document answer the question below. 
+Q5. Now we can scane through our data, and different colors will stand out. Do you notice any strange values? What are they?
+```
+
+### Exporting data.
+For the purposes of this class, you'll likely be working with all of your data in Excel - and if we ever use a different statistical program, we'll have step-by-step instructions to help us all out.
+However, maybe you like coding, and R or python are your thing, which is great! Or, you may find yourself needing to share your data with people who don't have access to Mircosoft Excel - it's not a free software. OR, you may have a PC, your friend might have a Mac, and you are entering dates, fun times. 
+
+If that's the case (and in general); storing your data in a universal, open, and static format will help deal with this problem. And, I think, a comma-separated value (CSV) file is your best bet. The advantage of a CSV file over an Excel/SPSS/etc. file is that we can open and read a CSV file using just about any software, including plain text editors like TextEdit or NotePad. Data in a CSV file can also be easily imported into other formats and environments, such as SQLite and R. We’re not tied to a certain version of a certain expensive program when we work with CSV files, so it’s a good format to work with for maximum portability and endurance. Most spreadsheet programs can save to delimited text formats like CSV easily, although they may give you a warning during the file export.
+
+To save an Excel tab (you can only save one tab per one CSV file) as a CSV file:
+1. Go to File>Save As
+2. In 'Save as type:', select "CSV (Comma delimited (.csv))
+3. Type in the file name, and you're good to go!
+
+##### A note on R and .xlsx
+If you've used R before, you might be saying, "Well, it appears Dr. Spera doesn't know R, because I know there are R packages that can read .xls or .xlsx files (as well as Google spreadsheets, which we are apparentl not even allowed in this course). It is even possible to access different worksheets in the .xlsx documents.".
+Yes. I obviously know R. And know that. 
+But, some things to keep in mind. 
+- some of these only work on Windows
+- this equates to replacing a (simple but manual) export to csv with additional complexity/dependencies in the data analysis R code
+data formatting best practice still apply
+- Is there really a good reason why csv won't work? Just save it as a CSV file.
+
+```diff 
++Upload your Word file to Blackboard, pick up a take-home worksheet from Dr. Lookingbill. And you're good to go!
+```
+
+### See you on Wednesday
 
 
 

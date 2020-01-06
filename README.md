@@ -28,9 +28,11 @@ You have three tasks to finish in class today, and one short assignment for Wedn
 ### Introduction
 One of the major goals of this class is for everyone to leave here with a better understanding of how to collect data, different types of data, and how to ask questions and perform the approprioate statistical analyses on any dataset. So today, we're going to jump right into working with data and learn about the best practices and common pitfalls of data organization. If you organize your data in the most 'tidy' way, it makes data analyis (and science) so. much. easier. I don't think you'd believe me if I told you the amount of time (approimately my entire fourth year of graduate school) I've spent just organzing data, or 'data wrangling', before I could even begin to think about analyzing it. 
 ![sciencegif](https://github.com/saspera/assets/blob/master/ronburgundyscience.gif)
+
 ###### I could not find one 'science' gif with a lady, which was upsetting. 
 
 Most researchers have their data in spreadhseets, so, that's where we'll start. Spreadsheets allow scientists to do a lot of things, like data entry, organzing data, subsetting and sorting data, (v. basic) statistics, and (v. basic) plotting. I say '(v. basic)' because spreadsheet-software like Excel is pretty limited in what it can do, and it's also easy to accidentlly apply the wrong formulas to adjacent cells - so for these - and reproducibility reasons - I like to do a majority of my statistics and figure making using other programs like R or Python.
+
 ![austinpowers](https://github.com/saspera/assets/blob/master/AustinPowersExcelMeme.jpg)
 
 That being said, Excel is still super useful for storing data, and also totally appropriate many of lab assignments for this class. So, we're going to use learn how to 'tidy' our data. *Good organization is the foundation of any research project.*
@@ -46,7 +48,8 @@ This is why it’s extremely important to set up well-formatted tables from the 
 When you’re working with spreadsheets, during data clean up or analyses, it’s very easy to end up with a spreadsheet that looks very different from the one you started with. In order to be able to reproduce your analyses or figure out what past-you did, you should create a new file with your cleaned or analyzed data. Don’t modify the original dataset, or you will never know where you started!
 
 Another best practice is to keep track of the steps you took in your clean up or analysis. You should track these steps as you would any step in an experiment. I recommend that you do this in a plain text file (use that notepad/wordpad app on your laptop) and store it in the same folder as the data file. 
-[textfile screenshot](https://github.com/saspera/assets/blob/master/spreadsheet-setup-updated.png)
+
+![textfile screenshot](https://github.com/saspera/assets/blob/master/spreadsheet-setup-updated.png)
 
 Do not - I repeat, do not - do what I usually do, and have 4 different files ("survey_data_og.xlsx", "survey_data_final_for_real.xlsx", "survey_data_this_is_really_the_last_one.xlsx", "survey_data_actual_real_final_but_really.xlsx")
 and have to try and remember what they were 6 months after I last touched it.
@@ -65,12 +68,14 @@ To do so, you should:
 For instance, we have data from a survey of small mammals in a desert ecosystem. Different people have gone to the field and entered data into a spreadsheet. They keep track of things like species, plot, weight, sex and date collected.
 
 If they were to keep track of the data like this:
+
 ![image2](https://github.com/saspera/assets/blob/master/Image2.png)
 
 the problem is that species and sex are in the same field. So, if they wanted to look at all of one species or look at different weight distributions by sex, it would be hard to do this using this data setup. If instead we put sex and species in different columns, you can see that it would be much easier.
 
 The rule of thumb, when setting up a datasheet, is columns = variables, rows = observations, cells = data (values).
 So, instead we should have:
+
 ![image 3](https://github.com/saspera/assets/blob/master/Image3.png)
 
 ```diff 
@@ -121,10 +126,12 @@ The spreadsheets or statistical programs will likely mis-interpret blank cells t
 There are a few reasons why null values get represented differently within a dataset. Sometimes confusing null values are automatically recorded from the measuring device. If that’s the case, there’s not much you can do, but it can be addressed in data cleaning with a tool like OpenRefine before analysis. Other times different null values are used to convey different reasons why the data isn’t there. This is important information to capture, but is in effect using one column to capture two pieces of information. Like for using formatting to convey information it would be good here to create a new column like ‘data_missing’ and use that column to capture the different reasons.
 
 Whatever the reason, it’s a problem if unknown or missing data is recorded as -999, 999, or 0. Many statistical programs will not recognize that these are intended to represent missing (null) values. How these values are interpreted will depend on the software you use to analyze your data. It is essential to use a clearly defined and consistent null indicator. Blanks (most applications) and NA (for R) are good choices. White et al, 2013, explain good choices for indicating null values for different software applications in their article: Nine simple ways to make it easier to (re)use your data. Ideas in Ecology and Evolution.
+
 ![image5](https://github.com/saspera/assets/blob/master/image5.png)
 
 #### Using formatting to convey information
 **Example:** highlighting cells, rows or columns that should be excluded from an analysis, leaving blank rows to indicate separations in data.
+
 ![image6](https://github.com/saspera/assets/blob/master/image6.png)
 **Solution:** create a new field to encode which data should be excluded.
 ![image7](https://github.com/saspera/assets/blob/master/Image7.png)

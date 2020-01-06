@@ -254,7 +254,8 @@ Sort the 'Weight_grams' column in your spreadsheet from Largest to Smallest.
 ![image11](https://github.com/saspera/assets/blob/master/Image11.png)
 ```diff 
 3. You should get a warning asking to 'Expand the Selction'. Make sure that is checked and click 'Sort.
-   - Expanding your sort ensures that the all the data in one row move together instead of only sorting a single column in isolation.      - Sorting by only a single column will scramble your data - a single row will no longer represent an individual observation.
+   - Expanding your sort ensures that the all the data in one row move together instead of only sorting a single column in isolation.  
+   - Sorting by only a single column will scramble your data - a single row will no longer represent an individual observation.
 4. Make sure your 'Sort' dialogue box matches the one below, and then hit okay.
 ```
 ![image12](https://github.com/saspera/assets/blob/master/Image12.png)
